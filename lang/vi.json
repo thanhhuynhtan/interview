@@ -1,0 +1,13 @@
+{
+    "login": {
+        "Login": "Đăng nhập",
+        "Register": "Đăng ký",
+        "Signup": "Đăng ký",
+        "Term": "<p>Bằng việc lựa chọn đăng ký, bạn đã đồng ý với <u>Điều khoản dịch vụ</u> và <u>Chính sách bảo mật</u> của chúng tôi.</p>"
+    },
+    "home": {
+        "HomePage_Title": "Discover",
+        "HomePage_headline": "What's new today",
+        "HomePage_more": "See more"
+    }
+}

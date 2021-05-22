@@ -1,0 +1,13 @@
+{
+    "login": {
+        "Login": "Log in",
+        "Register": "Register",
+        "Signup": "Sign up",
+        "Term": "<p>By signing up, you agree to Photo’s <u>Terms of Service</u> and <u>Privacy Policy</u>.</p>"
+    },
+    "home": {
+        "HomePage_Title": "Discover",
+        "HomePage_headline": "What's new today",
+        "HomePage_more": "See more"
+    }
+}

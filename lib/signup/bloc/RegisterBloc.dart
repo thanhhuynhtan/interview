@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:interview/Model/RegisterEvent.dart';
-import 'package:interview/Model/RegisterState.dart';
+import 'package:interview/signup/bloc/RegisterEvent.dart';
+import 'package:interview/signup/bloc/RegisterState.dart';
 import 'package:interview/Model/SubmissionState.dart';
 import 'package:interview/Model/UserModel.dart';
 

@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:interview/Model/UserModel.dart';
-import 'package:interview/Model/AuthenticateEvent.dart';
-import 'package:interview/Model/AuthenticateState.dart';
+import 'package:interview/app/bloc/AuthenticateEvent.dart';
+import 'package:interview/app/bloc/AuthenticateState.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {

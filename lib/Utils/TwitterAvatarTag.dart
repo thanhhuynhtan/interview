@@ -33,9 +33,8 @@ class TwitterAvatarTag extends StatelessWidget {
             width: 2.w,
           ),
           Container(
-            height: 25.sp,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(

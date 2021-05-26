@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:interview/Model/LoginEvent.dart';
-import 'package:interview/Model/LoginState.dart';
+import 'package:interview/login/bloc/LoginEvent.dart';
+import 'package:interview/login/bloc/LoginState.dart';
 import 'package:interview/Model/SubmissionState.dart';
 import 'package:interview/Model/UserModel.dart';
 

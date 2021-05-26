@@ -172,31 +172,36 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {},
             ),
           ),
-          Container(
-            height: 6.h,
-            width: 22.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                30.sp,
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: 2.w,
               ),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xFFFF00D6),
-                  Color(0xFFFF4D00),
-                ],
+            child: Container(
+              height: 6.h,
+              width: 22.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  30.sp,
+                ),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color(0xFFFF00D6),
+                    Color(0xFFFF4D00),
+                  ],
+                ),
               ),
-            ),
-            child: Center(
-              child: Container(
-                height: 2.7.h,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "assets/icon/add.png",
+              child: Center(
+                child: Container(
+                  height: 2.7.h,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "assets/icon/add.png",
+                      ),
+                      fit: BoxFit.fitHeight,
                     ),
-                    fit: BoxFit.fitHeight,
                   ),
                 ),
               ),

@@ -6,10 +6,14 @@ Widget inputField({
   required TextEditingController controller,
   required String hintText,
   required bool obscure,
+  required void Function(String value)? onChanged,
+  required String? Function(String? value)? validator,
 }) {
   return TextFormField(
     controller: controller,
     obscureText: obscure,
+    onChanged: onChanged,
+    validator: validator,
     decoration: InputDecoration(
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
@@ -19,6 +23,20 @@ Widget inputField({
         borderRadius: BorderRadius.zero,
       ),
       enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.black,
+          width: 2.sp,
+        ),
+        borderRadius: BorderRadius.zero,
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.black,
+          width: 2.sp,
+        ),
+        borderRadius: BorderRadius.zero,
+      ),
+      focusedErrorBorder: OutlineInputBorder(
         borderSide: BorderSide(
           color: Colors.black,
           width: 2.sp,

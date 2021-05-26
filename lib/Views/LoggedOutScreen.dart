@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:interview/Bloc/AuthenticationBloc.dart';
+import 'package:interview/Bloc/LoginBloc.dart';
+import 'package:interview/Model/UserModel.dart';
+import 'package:interview/Utils/SizeTransitionRoute.dart';
 import 'package:interview/Utils/TwitterAvatarTag.dart';
 import 'package:interview/Utils/localization.dart';
 import 'package:interview/Views/LoginScreen.dart';
@@ -95,8 +100,10 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                         ),
                         onPressed: () {
                           Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => LoginScreen(),
+                            SizeTransitionRoute(
+                              LoginScreen(
+                                userModel: context.read<UserModel>(),
+                              ),
                             ),
                           );
                         },
@@ -124,8 +131,10 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                         ),
                         onPressed: () {
                           Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => RegisterScreen(),
+                            SizeTransitionRoute(
+                              RegisterScreen(
+                                userModel: context.read<UserModel>(),
+                              ),
                             ),
                           );
                         },

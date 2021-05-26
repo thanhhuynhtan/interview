@@ -116,6 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             semanticsLabel: 'Acme Logo',
                             height: 2.5.h,
                             width: 2.5.h,
+                            color: Theme.of(context).colorScheme.onPrimary,
                           ),
                           onPressed: () {
                             Navigator.of(context).pop();

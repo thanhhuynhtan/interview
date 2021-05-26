@@ -6,7 +6,7 @@ import 'package:interview/Utils/SizeTransitionRoute.dart';
 import 'package:interview/Utils/TwitterAvatarTag.dart';
 import 'package:interview/Utils/localization.dart';
 import 'package:interview/login/view/LoginScreen.dart';
-import 'package:interview/signup/view/RegisterScreen.dart';
+import 'package:interview/register/view/RegisterScreen.dart';
 import 'package:sizer/sizer.dart';
 
 class LoggedOutScreen extends StatefulWidget {

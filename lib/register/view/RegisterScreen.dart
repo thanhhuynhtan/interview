@@ -4,15 +4,15 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:interview/app/bloc/AuthenticationBloc.dart';
-import 'package:interview/signup/bloc/RegisterBloc.dart';
 import 'package:interview/app/bloc/AuthenticateEvent.dart';
-import 'package:interview/signup/bloc/RegisterEvent.dart';
-import 'package:interview/signup/bloc/RegisterState.dart';
 import 'package:interview/Model/SubmissionState.dart';
 import 'package:interview/Model/UserModel.dart';
 import 'package:interview/Utils/SnackBar.dart';
 import 'package:interview/Utils/localization.dart';
 import 'package:interview/Utils/InputField.dart';
+import 'package:interview/register/bloc/RegisterBloc.dart';
+import 'package:interview/register/bloc/RegisterEvent.dart';
+import 'package:interview/register/bloc/RegisterState.dart';
 import 'package:sizer/sizer.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -118,6 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             semanticsLabel: 'Acme Logo',
                             height: 2.5.h,
                             width: 2.5.h,
+                            color: Theme.of(context).colorScheme.onPrimary,
                           ),
                           onPressed: () {
                             Navigator.of(context).pop();

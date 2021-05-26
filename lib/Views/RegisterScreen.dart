@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:interview/Bloc/AuthenticationBloc.dart';
 import 'package:interview/Bloc/RegisterBloc.dart';
@@ -44,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       height: 7.h,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.black,
+        color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.circular(6),
       ),
       child: (state.submissionState is SubmissionLoading)
@@ -58,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       .translate("Login.Register")
                       .toUpperCase(),
                   style: GoogleFonts.roboto(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.onSecondary,
                     fontSize: 12.0.sp,
                     fontWeight: FontWeight.w900,
                   ),
@@ -99,7 +100,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   vertical: 2.h,
                   horizontal: 4.w,
                 ),
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.background,
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -108,21 +109,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     children: [
                       Container(
                         height: 5.h,
-                        width: 5.h,
+                        width: 2.5.h,
                         child: Center(
                           child: MaterialButton(
                             highlightColor: Colors.transparent,
                             splashColor: Colors.transparent,
                             padding: EdgeInsets.zero,
-                            child: Container(
+                            child: SvgPicture.asset(
+                              "assets/svg/back.svg",
+                              semanticsLabel: 'Acme Logo',
                               height: 2.5.h,
                               width: 2.5.h,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage("assets/icon/back.png"),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
                             ),
                             onPressed: () {
                               Navigator.of(context).pop();
@@ -137,7 +134,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           AppLocalization.of(context)!
                               .translate('Login.Register'),
                           style: GoogleFonts.comfortaa(
-                            color: Colors.black,
+                            color: Theme.of(context).colorScheme.onPrimary,
                             fontWeight: FontWeight.w400,
                             fontSize: 30.sp,
                           ),
@@ -148,6 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           bottom: 2.h,
                         ),
                         child: inputField(
+                          context,
                           controller: _usernameController,
                           hintText: "Username",
                           obscure: false,
@@ -162,6 +160,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           bottom: 2.h,
                         ),
                         child: inputField(
+                          context,
                           controller: _passwordController,
                           hintText: "Password",
                           obscure: true,
@@ -176,6 +175,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           bottom: 2.h,
                         ),
                         child: inputField(
+                          context,
                           controller: _repasswordController,
                           hintText: "Re-input Password",
                           obscure: true,
@@ -198,7 +198,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           "body": Style(
                             fontSize: FontSize(18.0),
                             fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            color: Theme.of(context).colorScheme.onPrimary,
                             fontFamily: "roboto",
                           ),
                         },

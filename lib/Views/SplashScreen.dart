@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
           height: 100.h,
           width: 100.w,
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.background,
           child: Column(
             children: [
               Expanded(

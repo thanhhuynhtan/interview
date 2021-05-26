@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:interview/Bloc/AuthenticationBloc.dart';
 import 'package:interview/Bloc/LoginBloc.dart';
@@ -43,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
       height: 7.h,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.black,
+        color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.circular(6),
       ),
       child: (state.submissionState is SubmissionLoading)
@@ -57,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       .translate("Login.Login")
                       .toUpperCase(),
                   style: GoogleFonts.roboto(
-                    color: Colors.white,
+                    color: Theme.of(context).colorScheme.onSecondary,
                     fontSize: 12.0.sp,
                     fontWeight: FontWeight.w900,
                   ),
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   vertical: 2.h,
                   horizontal: 4.w,
                 ),
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.background,
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -107,21 +108,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       Container(
                         height: 5.h,
-                        width: 5.h,
+                        width: 2.5.h,
                         child: Center(
                           child: MaterialButton(
                             highlightColor: Colors.transparent,
                             splashColor: Colors.transparent,
                             padding: EdgeInsets.zero,
-                            child: Container(
+                            child: SvgPicture.asset(
+                              "assets/svg/back.svg",
+                              semanticsLabel: 'Acme Logo',
                               height: 2.5.h,
                               width: 2.5.h,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage("assets/icon/back.png"),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
                             ),
                             onPressed: () {
                               Navigator.of(context).pop();
@@ -135,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           AppLocalization.of(context)!.translate('Login.Login'),
                           style: GoogleFonts.comfortaa(
-                            color: Colors.black,
+                            color: Theme.of(context).colorScheme.onPrimary,
                             fontWeight: FontWeight.w400,
                             fontSize: 30.sp,
                           ),
@@ -146,6 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           bottom: 2.h,
                         ),
                         child: inputField(
+                          context,
                           controller: _usernameController,
                           hintText: "Username",
                           obscure: false,
@@ -160,6 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           bottom: 2.h,
                         ),
                         child: inputField(
+                          context,
                           controller: _passwordController,
                           hintText: "Password",
                           obscure: true,

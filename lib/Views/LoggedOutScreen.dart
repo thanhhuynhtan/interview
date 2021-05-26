@@ -25,7 +25,7 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
         body: Container(
           height: 100.h,
           width: 100.w,
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.background,
           child: Column(
             children: [
               Expanded(
@@ -83,7 +83,7 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                         borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
                           width: 2.0,
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.onPrimary,
                         ),
                       ),
                       child: TextButton(
@@ -93,9 +93,9 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                                   .translate('Login.Login')
                                   .toUpperCase(),
                               style: GoogleFonts.roboto(
-                                color: Colors.black,
                                 fontSize: 11.0.sp,
                                 fontWeight: FontWeight.w900,
+                                color: Theme.of(context).colorScheme.onPrimary,
                               )),
                         ),
                         onPressed: () {
@@ -113,8 +113,8 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                       height: 7.h,
                       width: 43.w,
                       decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.secondary,
                         borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.black,
                       ),
                       child: TextButton(
                         child: Center(
@@ -123,7 +123,7 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                                 .translate('Login.Register')
                                 .toUpperCase(),
                             style: GoogleFonts.roboto(
-                              color: Colors.white,
+                              color: Theme.of(context).colorScheme.onSecondary,
                               fontSize: 11.0.sp,
                               fontWeight: FontWeight.w900,
                             ),

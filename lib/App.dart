@@ -5,6 +5,7 @@ import 'package:interview/Bloc/AuthenticationBloc.dart';
 import 'package:interview/Model/UserModel.dart';
 import 'package:interview/Model/AuthenticateEvent.dart';
 import 'package:interview/Model/AuthenticateState.dart';
+import 'package:interview/AppTheme.dart';
 import 'package:interview/Utils/localization.dart';
 import 'package:interview/Views/HomeScreen.dart';
 import 'package:interview/Views/LoggedOutScreen.dart';
@@ -38,9 +39,9 @@ class _AppState extends State<App> {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
-              theme: ThemeData(
-                primarySwatch: Colors.blue,
-              ),
+              themeMode: ThemeMode.system,
+              theme: AppTheme.lightTheme,
+              darkTheme: AppTheme.darkTheme,
               supportedLocales: [
                 Locale('en', 'US'),
                 Locale('vi', 'VN'),

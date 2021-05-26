@@ -33,6 +33,7 @@ dependencies:
   flutter_bloc: ^7.0.0
   equatable: ^2.0.2
   rxdart: ^0.27.0
+  flutter_svg: ^0.22.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -57,12 +58,12 @@ flutter:
   assets:
     - lang/en.json
     - lang/vi.json
-    - assets/icon/add.png
-    - assets/icon/back.png
-    - assets/icon/comment.png
-    - assets/icon/home.png
-    - assets/icon/person.png
-    - assets/icon/search.png
+    - assets/svg/add.svg
+    - assets/svg/back.svg
+    - assets/svg/comment.svg
+    - assets/svg/home.svg
+    - assets/svg/person.svg
+    - assets/svg/search.svg
     - assets/image/home_1.png
     - assets/image/home_2.png
     - assets/image/home_3.png

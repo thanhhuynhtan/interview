@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:interview/Utils/TwitterAvatarTag.dart';
 import 'package:interview/Utils/localization.dart';
@@ -28,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   .translate('Home.Headline')
                   .toUpperCase(),
               style: GoogleFonts.roboto(
-                color: Colors.black,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontWeight: FontWeight.w900,
                 fontSize: 12.sp,
               ),
@@ -62,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   .translate('Home.BrowseAll')
                   .toUpperCase(),
               style: GoogleFonts.roboto(
-                color: Colors.black,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontWeight: FontWeight.w900,
                 fontSize: 12.sp,
               ),
@@ -119,14 +120,14 @@ class _HomeScreenState extends State<HomeScreen> {
             borderRadius: BorderRadius.circular(6),
             border: Border.all(
               width: 2.sp,
-              color: Colors.black,
+              color: Theme.of(context).colorScheme.onPrimary,
             ),
           ),
           child: TextButton(
             child: Text(
               AppLocalization.of(context)!.translate('Home.More').toUpperCase(),
               style: GoogleFonts.roboto(
-                color: Colors.black,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontWeight: FontWeight.w900,
                 fontSize: 12.sp,
               ),
@@ -145,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
       height: 8.h,
       width: 100.w,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.primary,
         boxShadow: [
           BoxShadow(
             offset: Offset(
@@ -162,20 +163,20 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/icon/home.png",
+              iconAsset: "assets/svg/home.svg",
               onPressed: () {},
             ),
           ),
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/icon/search.png",
+              iconAsset: "assets/svg/search.svg",
               onPressed: () {},
             ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: 2.w,
-              ),
+              horizontal: 2.w,
+            ),
             child: Container(
               height: 6.h,
               width: 22.w,
@@ -193,29 +194,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               child: Center(
-                child: Container(
+                child: SvgPicture.asset(
+                  "assets/svg/add.svg",
+                  semanticsLabel: 'Acme Logo',
                   height: 2.7.h,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "assets/icon/add.png",
-                      ),
-                      fit: BoxFit.fitHeight,
-                    ),
-                  ),
+                  width: 2.7.h,
                 ),
               ),
             ),
           ),
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/icon/comment.png",
+              iconAsset: "assets/svg/comment.svg",
               onPressed: () {},
             ),
           ),
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/icon/person.png",
+              iconAsset: "assets/svg/person.svg",
               onPressed: () {},
             ),
           ),
@@ -231,14 +227,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       child: MaterialButton(
         child: Center(
-          child: Container(
+          child: SvgPicture.asset(
+            iconAsset,
+            semanticsLabel: 'Acme Logo',
+            color: Theme.of(context).colorScheme.onPrimary,
             height: 2.7.h,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(iconAsset),
-                fit: BoxFit.fitHeight,
-              ),
-            ),
+            width: 2.7.h,
           ),
         ),
         onPressed: onPressed,
@@ -253,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Container(
           height: 100.h,
           width: 100.w,
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.background,
           child: Column(
             children: [
               Padding(
@@ -268,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text(
                     AppLocalization.of(context)!.translate('Home.Title'),
                     style: GoogleFonts.comfortaa(
-                      color: Colors.black,
+                      color: Theme.of(context).colorScheme.onPrimary,
                       fontWeight: FontWeight.w400,
                       fontSize: 30.sp,
                     ),

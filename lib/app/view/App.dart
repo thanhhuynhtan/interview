@@ -3,12 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:interview/app/bloc/AuthenticationBloc.dart';
 import 'package:interview/Model/UserModel.dart';
-import 'package:interview/app/view/HomeScreen.dart';
+import 'package:interview/home/view/HomeScreen.dart';
 import 'package:interview/app/bloc/AuthenticateEvent.dart';
 import 'package:interview/app/bloc/AuthenticateState.dart';
 import 'package:interview/AppTheme.dart';
 import 'package:interview/Utils/localization.dart';
-import 'package:interview/app/view/LoggedOutScreen.dart';
+import 'package:interview/logout/view/LoggedOutScreen.dart';
 import 'package:interview/SplashScreen.dart';
 import 'package:sizer/sizer.dart';
 

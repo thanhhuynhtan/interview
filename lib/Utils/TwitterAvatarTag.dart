@@ -33,6 +33,7 @@ class TwitterAvatarTag extends StatelessWidget {
             width: 2.w,
           ),
           Container(
+            height: 25.sp,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +43,7 @@ class TwitterAvatarTag extends StatelessWidget {
                   style: GoogleFonts.roboto(
                     color: Colors.black,
                     fontWeight: FontWeight.w700,
-                    fontSize: 11.sp,
+                    fontSize: 10.sp,
                   ),
                 ),
                 Text(
@@ -50,7 +51,7 @@ class TwitterAvatarTag extends StatelessWidget {
                   style: GoogleFonts.roboto(
                     color: Colors.black.withOpacity(0.8),
                     fontWeight: FontWeight.w400,
-                    fontSize: 9.sp,
+                    fontSize: 8.sp,
                   ),
                 ),
               ],

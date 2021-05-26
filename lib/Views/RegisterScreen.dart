@@ -28,9 +28,9 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
-  TextEditingController _repasswordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _repasswordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   late RegisterBloc _registerBloc;
 
@@ -56,7 +56,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Center(
                 child: Text(
                   AppLocalization.of(context)!
-                      .translate("Login.Register")
+                      .translate('Login.Register')
                       .toUpperCase(),
                   style: GoogleFonts.roboto(
                     color: Theme.of(context).colorScheme.onSecondary,
@@ -116,7 +116,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             splashColor: Colors.transparent,
                             padding: EdgeInsets.zero,
                             child: SvgPicture.asset(
-                              "assets/svg/back.svg",
+                              'assets/svg/back.svg',
                               semanticsLabel: 'Acme Logo',
                               height: 2.5.h,
                               width: 2.5.h,
@@ -147,10 +147,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: inputField(
                           context,
                           controller: _usernameController,
-                          hintText: "Username",
+                          hintText: 'Username',
                           obscure: false,
                           validator: (value) =>
-                              state.isValidUsername ? null : "Invalid Username",
+                              state.isValidUsername ? null : 'Invalid Username',
                           onChanged: (value) =>
                               _registerBloc.add(RegisterUsernameChanged(value)),
                         ),
@@ -162,10 +162,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: inputField(
                           context,
                           controller: _passwordController,
-                          hintText: "Password",
+                          hintText: 'Password',
                           obscure: true,
                           validator: (value) =>
-                              state.isValidPassword ? null : "Invalid Password",
+                              state.isValidPassword ? null : 'Invalid Password',
                           onChanged: (value) =>
                               _registerBloc.add(RegisterPasswordChanged(value)),
                         ),
@@ -177,10 +177,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: inputField(
                           context,
                           controller: _repasswordController,
-                          hintText: "Re-input Password",
+                          hintText: 'Re-input Password',
                           obscure: true,
                           validator: (value) =>
-                              state.isValidRePassword ? null : "Incorrect",
+                              state.isValidRePassword ? null : 'Incorrect',
                           onChanged: (value) => _registerBloc
                               .add(RegisterRePasswordChanged(value)),
                         ),
@@ -195,11 +195,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         data: AppLocalization.of(context)!
                             .translate('Login.Term'),
                         style: {
-                          "body": Style(
+                          'body': Style(
                             fontSize: FontSize(18.0),
                             fontWeight: FontWeight.w400,
                             color: Theme.of(context).colorScheme.onPrimary,
-                            fontFamily: "roboto",
+                            fontFamily: 'roboto',
                           ),
                         },
                       ),

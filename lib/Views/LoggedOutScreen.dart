@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:interview/Bloc/AuthenticationBloc.dart';
-import 'package:interview/Bloc/LoginBloc.dart';
 import 'package:interview/Model/UserModel.dart';
 import 'package:interview/Utils/SizeTransitionRoute.dart';
 import 'package:interview/Utils/TwitterAvatarTag.dart';
@@ -32,7 +30,7 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                 child: Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/image/login_background.png"),
+                      image: AssetImage('assets/image/login_background.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -45,7 +43,7 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                           width: 60.w,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("assets/image/login_logo.png"),
+                              image: AssetImage('assets/image/login_logo.png'),
                               fit: BoxFit.fitWidth,
                             ),
                           ),
@@ -59,9 +57,9 @@ class _LoggedOutScreenState extends State<LoggedOutScreen> {
                             bottom: 2.h,
                           ),
                           child: TwitterAvatarTag(
-                            asset: "assets/image/login_avar.png",
-                            name: "Pawel Czerwinski",
-                            tag: "@pawel_czerwinski",
+                            asset: 'assets/image/login_avar.png',
+                            name: 'Pawel Czerwinski',
+                            tag: '@pawel_czerwinski',
                           ),
                         ),
                       ),

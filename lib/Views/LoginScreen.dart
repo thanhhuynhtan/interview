@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:interview/Bloc/AuthenticationBloc.dart';
 import 'package:interview/Bloc/LoginBloc.dart';
 import 'package:interview/Model/AuthenticateEvent.dart';
-import 'package:interview/Model/AuthenticateState.dart';
 import 'package:interview/Model/LoginEvent.dart';
 import 'package:interview/Model/LoginState.dart';
 import 'package:interview/Model/SubmissionState.dart';
@@ -28,8 +27,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _usernameController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   late LoginBloc _loginBloc;
 
@@ -55,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Center(
                 child: Text(
                   AppLocalization.of(context)!
-                      .translate("Login.Login")
+                      .translate('Login.Login')
                       .toUpperCase(),
                   style: GoogleFonts.roboto(
                     color: Theme.of(context).colorScheme.onSecondary,
@@ -115,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             splashColor: Colors.transparent,
                             padding: EdgeInsets.zero,
                             child: SvgPicture.asset(
-                              "assets/svg/back.svg",
+                              'assets/svg/back.svg',
                               semanticsLabel: 'Acme Logo',
                               height: 2.5.h,
                               width: 2.5.h,
@@ -145,10 +144,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: inputField(
                           context,
                           controller: _usernameController,
-                          hintText: "Username",
+                          hintText: 'Username',
                           obscure: false,
                           validator: (value) =>
-                              state.isValidUsername ? null : "Invalid Username",
+                              state.isValidUsername ? null : 'Invalid Username',
                           onChanged: (value) =>
                               _loginBloc.add(LoginUsernameChanged(value)),
                         ),
@@ -160,10 +159,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: inputField(
                           context,
                           controller: _passwordController,
-                          hintText: "Password",
+                          hintText: 'Password',
                           obscure: true,
                           validator: (value) =>
-                              state.isValidPassword ? null : "Invalid Password",
+                              state.isValidPassword ? null : 'Invalid Password',
                           onChanged: (value) =>
                               _loginBloc.add(LoginPasswordChanged(value)),
                         ),

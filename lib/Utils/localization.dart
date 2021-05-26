@@ -18,8 +18,8 @@ class AppLocalization {
   late Map<String, dynamic> _localizedString;
 
   Future load() async {
-    String jsonContent =
-        await rootBundle.loadString("lang/${locale.languageCode}.json");
+    var jsonContent =
+        await rootBundle.loadString('lang/${locale.languageCode}.json');
     _localizedString = json.decode(jsonContent);
   }
 
@@ -46,7 +46,7 @@ class _AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
 
   @override
   Future<AppLocalization> load(Locale locale) async {
-    AppLocalization localization = new AppLocalization(locale);
+    var localization = AppLocalization(locale);
     await localization.load();
     return localization;
   }

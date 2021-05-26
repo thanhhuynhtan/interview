@@ -27,7 +27,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       String username, String password) async* {
     yield state.update(submissionState: SubmissionLoading());
     try {
-      userModel.signUp(username: username, password: password);
+      await userModel.signUp(username: username, password: password);
       yield state.update(submissionState: SubmissionSuccess());
     } catch (error) {
       yield state.update(

@@ -85,21 +85,21 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (BuildContext context, int index) {
           if (index == 0) {
             return buildTopNews(
-              "assets/image/home_1.png",
-              "assets/image/home_avar.png",
-              "Ridhwan Nordin",
-              "@ridzjcob",
+              'assets/image/home_1.png',
+              'assets/image/home_avar.png',
+              'Ridhwan Nordin',
+              '@ridzjcob',
             );
           } else if (index == 11) {
             return seeMoreButton();
           } else {
             return Image.asset(
-              "assets/image/home_${index + 1}.png",
+              'assets/image/home_${index + 1}.png',
               fit: BoxFit.fitWidth,
             );
           }
         },
-        staggeredTileBuilder: (int index) => new StaggeredTile.fit(
+        staggeredTileBuilder: (int index) => StaggeredTile.fit(
           (index == 0 || index == 11) ? 2 : 1,
         ),
         mainAxisSpacing: 5.sp,
@@ -133,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             onPressed: () {
-              print("HomeScreen - See More Button - Pressed");
+              print('HomeScreen - See More Button - Pressed');
             },
           ),
         ),
@@ -163,13 +163,13 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/svg/home.svg",
+              iconAsset: 'assets/svg/home.svg',
               onPressed: () {},
             ),
           ),
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/svg/search.svg",
+              iconAsset: 'assets/svg/search.svg',
               onPressed: () {},
             ),
           ),
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: Center(
                 child: SvgPicture.asset(
-                  "assets/svg/add.svg",
+                  'assets/svg/add.svg',
                   semanticsLabel: 'Acme Logo',
                   height: 2.7.h,
                   width: 2.7.h,
@@ -205,13 +205,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/svg/comment.svg",
+              iconAsset: 'assets/svg/comment.svg',
               onPressed: () {},
             ),
           ),
           Expanded(
             child: buildNavigateButton(
-              iconAsset: "assets/svg/person.svg",
+              iconAsset: 'assets/svg/person.svg',
               onPressed: () {},
             ),
           ),

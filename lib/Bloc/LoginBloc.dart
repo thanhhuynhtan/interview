@@ -25,7 +25,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       String username, String password) async* {
     yield state.update(submissionState: SubmissionLoading());
     try {
-      userModel.signIn(username: username, password: password);
+      await userModel.signIn(username: username, password: password);
       yield state.update(submissionState: SubmissionSuccess());
     } catch (error) {
       yield state.update(

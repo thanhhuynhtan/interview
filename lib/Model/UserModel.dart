@@ -2,14 +2,12 @@ import 'dart:async';
 
 class UserModel {
   late String? _username;
-  late String? _password;
 
   Future<void> signIn({
     required String username,
     required String password,
   }) async {
     _username = username;
-    _password = password;
     await Future.delayed(
       Duration(seconds: 1),
     );
@@ -20,7 +18,6 @@ class UserModel {
     required String password,
   }) async {
     _username = username;
-    _password = password;
     await Future.delayed(
       Duration(seconds: 1),
     );
@@ -28,7 +25,6 @@ class UserModel {
 
   Future<void> signOut() async {
     _username = null;
-    _password = null;
     await Future.delayed(
       Duration(seconds: 1),
     );
@@ -48,6 +44,6 @@ class UserModel {
     await Future.delayed(
       Duration(seconds: 1),
     );
-    return _username ?? "";
+    return _username ?? '';
   }
 }
